@@ -1,6 +1,6 @@
 module "vpc-one" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "1.53.0"
+  version = "2.44.0"
 
   name = "terraform-vpc-one"
 
@@ -15,7 +15,7 @@ module "vpc-one" {
 
 module "vpc-two" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "1.53.0"
+  version = "2.44.0"
 
   name = "terraform-vpc-two"
 
@@ -30,7 +30,7 @@ module "vpc-two" {
 
 module "vpc-three" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "1.53.0"
+  version = "2.44.0"
 
   name = "terraform-vpc-three"
 
@@ -45,7 +45,7 @@ module "vpc-three" {
 
 module "vpc-four" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "1.53.0"
+  version = "2.44.0"
 
   name = "terraform-vpc-four"
 

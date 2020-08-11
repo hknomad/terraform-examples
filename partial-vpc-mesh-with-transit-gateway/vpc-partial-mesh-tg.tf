@@ -1,12 +1,12 @@
 module "vpc-one" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "1.53.0"
+  version = "2.44.0"
 
-  name = "terraform-vpc-one"
+  name = "gg_vpc-vsz"
 
   cidr = "10.1.0.0/16"
 
-  azs = ["ap-northeast-1a", "ap-northeast-1c"]
+  azs = ["eu-west-1a", "eu-west-1c"]
 
   public_subnets       = ["10.1.0.0/24", "10.1.1.0/24"]
   enable_dns_hostnames = true
@@ -15,13 +15,13 @@ module "vpc-one" {
 
 module "vpc-two" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "1.53.0"
+  version = "2.44.0"
 
-  name = "terraform-vpc-two"
+  name = "gg_vpc-dsg"
 
   cidr = "10.2.0.0/16"
 
-  azs = ["ap-northeast-1a", "ap-northeast-1c"]
+  azs = ["eu-west-1a", "eu-west-1c"]
 
   private_subnets      = ["10.2.0.0/24", "10.2.1.0/24"]
   enable_dns_hostnames = true
@@ -30,13 +30,13 @@ module "vpc-two" {
 
 module "vpc-three" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "1.53.0"
+  version = "2.44.0"
 
-  name = "terraform-vpc-three"
+  name = "gg_vpc-srp"
 
   cidr = "10.3.0.0/16"
 
-  azs = ["ap-northeast-1a", "ap-northeast-1c"]
+  azs = ["eu-west-1a", "eu-west-1c"]
 
   private_subnets      = ["10.3.0.0/24", "10.3.1.0/24"]
   enable_dns_hostnames = true
@@ -45,12 +45,12 @@ module "vpc-three" {
 
 module "vpc-four" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "1.53.0"
+  version = "2.44.0"
 
-  name = "terraform-vpc-four"
+  name = "gg_vpc-dev"
 
   cidr = "10.4.0.0/16"
-  azs  = ["ap-northeast-1a", "ap-northeast-1c"]
+  azs  = ["eu-west-1a", "eu-west-1c"]
 
   private_subnets      = ["10.4.0.0/24", "10.4.1.0/24"]
   enable_dns_hostnames = true
@@ -61,7 +61,7 @@ resource "aws_ec2_transit_gateway" "tgw" {
   auto_accept_shared_attachments = "enable"
 
   tags = {
-    Name = "terraform-tgw"
+    Name = "gg_tgw-1"
   }
 }
 
